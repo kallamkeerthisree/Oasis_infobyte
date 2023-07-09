@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Temperature Converter</title>
+    <style>
+        
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #F8F8F8;
+        background-image: url(https://w0.peakpx.com/wallpaper/518/310/HD-wallpaper-beauty-beyond-our-dreams-illustration-stars-red-planets-dust-clouds-formation-yellow-hot-temperature-universe-dark-rendering-outer-space-blue.jpg);
+        background-attachment: fixed;
+        background-repeat: 2;
+        background-size: cover;
+      }
+      
+      h1 {
+        text-align: center;
+       color: brown;
+      }
+      
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #FFFFFF;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS50XtJvnJUsghVVMnmcARJQRWtaclif97NQ&usqp=CAU);
+        background-size: cover;
+    }
+      
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333333;
+      }
+      
+      input[type="number"] {
+        padding: 8px;
+        border: 1px solid #CCCCCC;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+      
+      button[type="button"] {
+        background-color: #4CAF50;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 150px;
+      }
+      
+      button[type="button"]:hover {
+        background-color: #3e8e41;
+      }
+    
+      /* Add your CSS styles here */
+    </style>
+  </head>
+  <body>
+    <h1>Temperature Converter</h1>
+    <form>
+      <label for="celsius">celsius</label>
+      <input type="number" id="celsius" name="celsius">
+      <br>
+      <label for="fahrenheit">Fahrenheit:</label>
+      <input type="number" id="fahrenheit" name="fahrenheit">
+      <br>
+      <label for="kelvin">Kelvin:</label>
+      <input type="number" id="kelvin" name="kelvin">
+      <br>
+      <label for="rankine">Rankine:</label>
+      <input type="number" id="rankine" name="rankine">
+      <br>
+      <button type="button" onclick="convert()">convert</button>
+    </form>
+    <script>
+      function convert() {
+        const celsius = parseFloat(document.getElementById('celsius').value);
+        const fahrenheit = parseFloat(document.getElementById('fahrenheit').value);
+        const kelvin = parseFloat(document.getElementById('kelvin').value);
+        const rankine = parseFloat(document.getElementById('rankine').value);
+        
+         if (!isNaN(celsius)) {
+          const fahrenheitResult = (celsius * 1.8) + 32;
+          document.getElementById('fahrenheit').value = fahrenheitResult.toFixed(2);
+          
+          const kelvinResult = celsius + 273.15;
+          document.getElementById('kelvin').value = kelvinResult.toFixed(2);
+          
+          const rankineResult = (celsius + 273.15) * 1.8;
+          document.getElementById('rankine').value = rankineResult.toFixed(2);
+        }
+        
+        if (!isNaN(fahrenheit)) {
+          const celsiusResult = (fahrenheit - 32) / 1.8;
+          document.getElementById('celsius').value = celsiusResult.toFixed(2);
+          
+          const kelvinResult = (fahrenheit + 459.67) * 5/9;
+          document.getElementById('kelvin').value = kelvinResult.toFixed(2);
+          
+          const rankineResult = fahrenheit + 459.67;
+          document.getElementById('rankine').value = rankineResult.toFixed(2);
+        }
+        
+        if (!isNaN(kelvin)) {
+          const celsiusResult = kelvin - 273.15;
+          document.getElementById('celsius').value = celsiusResult.toFixed(2);
+          
+          const fahrenheitResult = kelvin * 9/5 - 459.67;
+          document.getElementById('fahrenheit').value = fahrenheitResult.toFixed(2);
+          
+          const rankineResult = kelvin * 1.8;
+          document.getElementById('rankine').value = rankineResult.toFixed(2);
+        }
+        
+        if (!isNaN(rankine)) {
+          const celsiusResult = (rankine - 491.67) * 5/9;
+          document.getElementById('celsius').value = celsiusResult.toFixed(2);
+          
+          const fahrenheitResult = rankine - 459.67;
+          document.getElementById('fahrenheit').value = fahrenheitResult.toFixed(2);
+          
+          const kelvinResult = rankine * 5/9;
+          document.getElementById('kelvin').value = kelvinResult.toFixed(2);
+        }
+      }
+    </script>
+  </body>
+</html>

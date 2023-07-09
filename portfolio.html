@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        body {
+            background-image: url('https://directlinedev.com/media/services/service/background/background_11.wide.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+        }
+        #about-img {
+  float: right;
+  width: 700px;
+  height: 700px;
+  border: 5px gainsboro;
+  border-radius: 100%;
+}
+
+
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
+
+        .navbar {
+            background-color: bisque;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            transition: transform 0.3s ease;
+            z-index: 1;
+        }
+
+        .navbar:hover {
+            transform: translateX(0%);
+        }
+
+        .navbar a {
+            display: block;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 0 50px;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #ff9aa2;
+        }
+
+        .navbar a.active {
+            background-color: #4CAF50;
+        }
+
+        .content {
+            flex: 1;
+            padding: 80px 16px 16px 16px;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 32px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.5;
+            max-width: 50%;
+        }
+
+        /* new CSS styles for button */
+        .content button {
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+            margin-left: 30px;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .waviy {
+  position: relative;
+  /* -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2)); */
+  font-size: 60px;
+}
+        
+
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color:black;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+.loader {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+.loader > span {
+  display: inline-block;
+  color:red;
+  transform-style: preserve-3d;
+  transform-origin: 0 100%;
+  animation: anim 3s infinite linear;
+}
+.loader > span:nth-child(even) {
+  color: #00ed64;
+}
+.loader > span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader > span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.loader > span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.loader > span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.loader > span:nth-child(6) {
+  animation-delay: 1s;
+}
+.loader > span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+.loader > span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+.loader > span:nth-child(9) {
+  animation-delay: 1.6s;
+}
+.loader > span:nth-child(10) {
+  animation-delay: 1.8s;
+}
+.loader > span:nth-child(11) {
+  animation-delay: 2s;
+}
+.loader > span:nth-child(12) {
+  animation-delay: 2.2s;
+}
+.loader > span:nth-child(13) {
+  animation-delay: 2.4s;
+}
+.loader > span:nth-child(14) {
+  animation-delay: 2.6s;
+}
+@keyframes anim {
+  35% {
+    transform: rotateX(360deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+.conten {
+	position: relative;
+}
+
+.conten h6 {
+	color: #fff;
+	font-size: 60px;
+	position: absolute;
+	
+}
+
+.conten h6:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px #8338ec;
+  margin-top: -1px; /* adjust this value as needed */
+  
+
+}
+
+.conten h6:nth-child(2) {
+    color: #c19bf5;
+    animation: animate 4s ease-in-out infinite;
+    margin-top: -1px; /* adjust this value as needed */
+}
+
+@keyframes animate {
+    0%, 100% {
+        clip-path: polygon(0% 30%, 16% 29%, 33% 35%, 54% 45%, 70% 46%, 84% 44%, 100% 37%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 45%, 15% 50%, 34% 51%, 51% 47%, 67% 35%, 84% 30%, 100% 31%, 100% 100%, 0% 100%);
+    }
+}
+
+
+ .cont{
+  display: flex;
+    flex-direction: row;
+    
+ }
+ .box {
+    border: 5px solid #ccc;
+    padding: 20px;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    width: 45%;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-right: 5px;
+    background-attachment: scroll;
+  
+
+  }
+  
+  
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-color:greenyellow;
+    background-color: orangered;
+    color: aqua;
+  }
+  
+  img {
+    height: 500px;
+    width: 650px;
+   margin-top: -50px;
+  }
+  
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.social-icons a {
+  display: block;
+  width: 5px;
+  height: 5px;
+  line-height: 5px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #555;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.contact-info li {
+  margin-bottom: 2px;
+}
+
+.contact-info i {
+  margin-right: 2px;
+}
+
+@media (max-width: 767px) {
+  .social-icons, .contact-info {
+    margin-bottom: 20px;
+  }
+}
+#me{
+  width: 30px;
+  height: 30px;
+}
+#you{
+  width: 30px;
+  height: 30px;
+}
+#u{
+  width: 30px;
+  height: 30px;
+}
+#y{
+  width: 30px;
+  height: 30px;
+}
+
+
+
+
+        
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a class="active" href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">SKILLS</a>
+            <a href="#">PROJECT</a>
+            <a href="#">CONTACT</a>
+        </div>
+        
+        <div class="content">
+            <h1 >Welcome to my website!</h1>
+            <img id="about-img" src="keerthi.jpg" alt="About Us">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio porro a illum modi autem quibusdam nobis, laboriosam dignissimos eos impedit tempore consectetur mollitia voluptatum sed saepe incidunt dolores alias error quae cum quam in placeat maxime. Laboriosam excepturi magni iure suscipit. Eaque esse earum officiis fugit commodi vitae voluptatem iusto, culpa magni blanditiis mollitia laborum corporis omnis illo alias facilis consectetur, eligendi atque voluptates. Expedita nihil, molestiae culpa molestias, consectetur nulla adipisci quam quae corrupti, velit enim deserunt atque iusto. Sequi placeat doloremque tempora, soluta fugiat odio atque? Aliquam deleniti temporibus consectetur doloremque voluptate facilis laborum fugit, nihil obcaecati quas?</p>
+            <button>Watch Portfolio</button>
+            
+            
+            
+                <div class="waviy" id="ABOUT">
+                    <span style="--i:1">A</span>
+                    <span style="--i:2">B</span>
+                    <span style="--i:3">O</span>
+                    <span style="--i:4">U</span>
+                    <span style="--i:5">T</span>
+                    
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quod deleniti eveniet dolores. Quos doloremque nesciunt a illo, dolore, voluptates numquam consectetur harum laborum odit dolorem vero ad ut recusandae eaque nostrum velit corporis optio architecto ullam repudiandae dolorum suscipit, autem vitae! Praesentium, voluptatum enim mollitia eum optio aliquid ipsam ea, tempora, recusandae est sit ipsa maiores? Veniam nemo dolorum, tempore at odio aperiam. Sequi ipsum mollitia at suscipit, natus ducimus commodi laudantium saepe facere iusto possimus fugit ex? Veniam, omnis aut minus facere deleniti sapiente assumenda earum possimus dolore incidunt ut exercitationem nam eum libero veritatis reiciendis. Illo quidem fugiat dolor repellendus sint voluptatem, dicta vel non architecto necessitatibus dolorem accusantium in quae deleniti vero exercitationem excepturi pariatur, veritatis, quisquam recusandae perspiciatis! Modi cum facilis perferendis? Maiores laborum voluptatum deserunt necessitatibus provident eos fugit dolorem id consectetur, quo ducimus tempora in voluptas nobis adipisci nulla corporis odit sapiente enim odio quis? Itaque consectetur repellat suscipit dolorem at nostrum! Ab, iste! Quibusdam impedit ipsam reprehenderit nemo ratione quia deleniti excepturi. Rem consequatur at et ipsum hic odit dignissimos natus aliquam quaerat, neque officia animi assumenda, omnis sapiente nisi molestiae? Repellat delectus libero voluptas quo illum temporibus est doloribus perferendis esse!</p>
+                <div class="loader" id="SKILLS">
+                    <span>S</span>
+                    <span>K</span>
+                    <span>I</span>
+                    <span>L</span>
+                    <span>L</span>
+                    <span>S</span>
+                </div>
+            
+                   <li style="font-size: 30px;">HTML</li>
+                   <li style="font-size: 30px;">CSS</li>
+                   <li style="font-size: 30px;">C-PROGRAMING</li>
+                   <li style="font-size: 30px;">PYTHON</li>
+                   <li style="font-size: 30px;" >JAVA</li>
+                   <li style="font-size: 30px;">SQL</li>
+                   <section>
+	<div class="conten">
+		<h6>PROJECTS</h6>
+		<h6>PROJECTS</h6>
+	</div>
+</section>
+<div class="cont">
+<div class="box">
+  <h6 style="font-size:20px; margin-top: -20px;"><b>ONLINE DOCTOR CONSULTENCY</b></h6>
+  <img src="piston.png"
+  <article style="font-size: 10px;">This website aims to revolutionize healthcare by bridging the gap between patients and doctors, allowing individuals to seek professional medical advice from the comfort of their own homes. Through our user-friendly interface, patients can easily connect with licensed physicians in various specialties, enabling them to discuss their health concerns, receive accurate diagnoses, and obtain personalized treatment plans. Our secure and confidential platform ensures that sensitive medical information is protected, while offering a seamless experience for both patients and doctors. By harnessing the power of technology, our website facilitates efficient and accessible healthcare, empowering individuals to prioritize their well-being in a convenient and timely manner.</article>
+</div>
+<div class="box">
+  <h6 style="font-size:40px; margin-top: -20px;"><b>COMMUNITY SERVICE PROJECT</b></h6>
+  <img src="https://tse4.mm.bing.net/th?id=OIP.YpqjBf8QTJJkJl8sTD71WgHaFS&pid=Api&P=0&h=180" alt="loading your image">
+  <article style="font-size: 30px;">Community Service Project involves students in community development and service activities and applies the experience to personal and academic development. Community Service Project is meant to link the community with the college for mutual benefit.Community Service Project involves students in community development and service activities and applies the experience to personal and academic development. Community Service Project is meant to link the community with the college for mutual benefit.Community Service Project involves students in community development and service activities and applies the experience to personal and academic development. Community Service Project is meant to link the community with the college for mutual benefit.Community Service Project involves students in community development and service activities and applies the experience to personal and academic development. Community Service Project is meant to link the community with the college for mutual benefit.Community Service Project involves students in community development and service activities and applies the experience to personal and academic development. Community Service Project is meant to link the community with the college for mutual benefit.Community Service Project involves students in community development and service activities and applies the experience to personal and academic development. Community Service Project is meant to link the community with the college for mutual benefit.Community Service Project involves students in community development and service activities and applies the experience to personal and academic development. Community Service Project is meant to link the community with the college for mutual benefit.Community Service Project involves students in community development and service activities and applies the experience to personal and academic development. Community Service Project is meant to link the community with the college for mutual benefit.</article>
+</div>
+</div>
+<footer style="border: 2px solid black; width: 100%; background-color: #333;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="social-icons">
+          <li><a href="https://instagram.com/keerthi_sree_kallam?igshid=MzNlNGNkZWQ4Mg=="><i class="fab fa-instagram"><img id="u" src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/instagram-icon.png"</i></a></li>
+          <li><a href="https://in.linkedin.com/in/kallam-keerthi-sree-93b608248"><i class="fab fa-linkedin"><img id="me" src="https://ra.ac.ae/wp-content/uploads/2020/01/linkedin-icon-logo-png-transparent.png"</i></a></li>
+          <li><a href="keerthisreekallam29@gmail.com"><i class="fab fa-facebook"><img id="y" src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/gmail-icon.png"</i></a></li>
+          <li><a href="https://www.facebook.com/gopireddy.konda.1?mibextid=ZbWKwL"><i class="fab fa-facebook"><img id="you" src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/facebook-icon.png"</i></a></li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown USA</li>
+          <li><i class="fas fa-phone"></i>9030650699</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+                   
+                   
+                   
+
+                
+    </body>
+</html>
+            
